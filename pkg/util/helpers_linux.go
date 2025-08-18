@@ -47,6 +47,7 @@ func getOSVersion(osReleasePath string) (string, error) {
 	if err != nil {
 		return "", err
 	}
+	fmt.Printf("OS Release Information: %+v\n", osReleaseMap)
 	switch osReleaseMap["ID"] {
 	case "cos":
 		return getCOSVersion(osReleaseMap), nil
